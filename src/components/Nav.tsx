@@ -22,7 +22,7 @@ const Nav = () => {
         <li>
           {/* <img src={x} alt="" /> */}
           <svg fill="red" className="icon">
-            <use xlinkHref="#money.svg" />
+            <use xlinkHref="#money" />
           </svg>
           `;
           <Link to="/tags">标签页</Link>
