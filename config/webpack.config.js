@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 const fs = require('fs');
 const path = require('path');
@@ -351,6 +351,13 @@ module.exports = function (webpackEnv) {
           oneOf: [
             // TODO: Merge this config once `image/avif` is in the mime-db
             // https://github.com/jshttp/mime-db
+            {
+              test: /\.svg$/,
+              use: [
+                { loader: 'svg-sprite-loader', options: {} },
+                { loader:  'svgo-loader', options: {} },
+              ]
+            },
             {
               test: [/\.avif$/],
               type: 'asset',
